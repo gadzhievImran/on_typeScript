@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
 import TimedInput from './TimedInput';
+import Ttt from './ttt';
 import { OFFERS_URL_GET } from '../config';
 
 class App extends Component {
   render() {
     return (
       <div>
+        <Ttt
+
+        />
         App
         <TimedInput
             onChange={({ val, name }) => console.log('TimedInput', val, name)}

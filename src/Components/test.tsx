@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 
-class TimedInput extends Component {
-    constructor(props) {
+export interface ITimedInput {
+    setState: Function,
+    componentWillUnmount: () => void,
+    changeParam: (val: number, name: string) => void
+}
+
+class TimedInput extends Component implements ITimedInput{
+    state: object;
+    constructor(props: object) {
         super(props);
         this.state = {
             obj: null,
@@ -9,13 +16,14 @@ class TimedInput extends Component {
         };
     }
 
-    componentWillUnmount() {
+    componentWillUnmount(): void {
         const { timer } = this.state;
         clearTimeout(timer);
     }
 
-    changeParam = (val, name) => {
-        const { name: n, onChangeTimed, onChange, time } = this.props;
+    changeParam: (val: number, name: string) => void = (val, name) => {
+
+        const { name: n, onChangeTimed, onChange, time }: any = this.props;
         this.setState(
             state => {
                 clearTimeout(this.state.timer);
@@ -41,14 +49,15 @@ class TimedInput extends Component {
     };
 
     render() {
-        console.log('state', this.state.obj);
+        const { name } = this.props;
         return (
             <div className="App">
             <input
                 onChange={event => {
-            this.changeParam(event.currentTarget.value, this.props.name);
-        }}
-        />
+                    const val: number = Number(event.currentTarget.value);
+                    this.changeParam(val, name);
+                }}
+            />
         </div>
     );
     }
