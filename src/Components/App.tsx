@@ -7,9 +7,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                App
                 <TimedInput
-                    className="imran"
                     onChange={({ val, name }: any): void => {
                         console.log('TI', val as number, name as string)
                     }}

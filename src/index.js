@@ -1,6 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import App from './Components/App';
-
-ReactDOM.render(<App compiler="TypeScript" framework="React" />, document.getElementById('root'));
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var ReactDOM = require("react-dom");
+var App_1 = require("./Components/App");
+ReactDOM.render(React.createElement(App_1.default, null), document.getElementById('root'));
+//# sourceMappingURL=index.js.map

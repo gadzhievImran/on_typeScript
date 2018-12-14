@@ -1,24 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+//    "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "esnext",
+    "module": "commonjs",
     "target": "es5",
-    "jsx": "preserve",
-    "watch": true,
-    "allowJs": true,
-    "skipLibCheck": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "noEmit": true,
-    "isolatedModules": true
+    "jsx": "react"
   },
   "include": [
     "./src/**/*"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }

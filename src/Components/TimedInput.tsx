@@ -1,18 +1,9 @@
 import * as React from 'react';
 
-export interface ITimedInput {
-    changeParam: (val: number, name: string) => void,
-
-}
-
-export interface IState {
-    obj: object | null;
-    timer: number | null;
-}
-
 class TimedInput extends React.Component <any, any>{
     constructor(props: object) {
         super(props);
+
         this.state = {
             obj: null,
             timer: null
@@ -53,10 +44,15 @@ class TimedInput extends React.Component <any, any>{
     };
 
     render(): object {
+        console.log('props', this.props);
         const { name }: any = this.props;
         return (
             <div>
+                <div>
+                    enter offer_id
+                </div>
                 <input
+                    placeholder="offer_id"
                     onChange={event => {
                         const val: number = Number(event.currentTarget.value);
                         this.changeParam(val, name as string);

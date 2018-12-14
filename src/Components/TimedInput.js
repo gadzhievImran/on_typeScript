@@ -12,23 +12,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importStar(require("react"));
+var React = require("react");
 var TimedInput = /** @class */ (function (_super) {
     __extends(TimedInput, _super);
     function TimedInput(props) {
         var _this = _super.call(this, props) || this;
         _this.changeParam = function (val, name) {
             var _a = _this.props, n = _a.name, onChangeTimed = _a.onChangeTimed, onChange = _a.onChange, time = _a.time;
-            _this.setState(function (state) {
-                clearTimeout(_this.state.timer);
+            _this.setState(function () {
+                var timer = _this.state.timer;
+                clearTimeout(timer);
                 var obj = {
                     val: val,
                     name: n
@@ -59,14 +53,16 @@ var TimedInput = /** @class */ (function (_super) {
     };
     TimedInput.prototype.render = function () {
         var _this = this;
+        console.log('props', this.props);
         var name = this.props.name;
-        return (react_1.default.createElement("div", { className: "App" },
-            react_1.default.createElement("input", { onChange: function (event) {
+        return (React.createElement("div", null,
+            React.createElement("div", null, "enter offer_id"),
+            React.createElement("input", { placeholder: "offer_id", onChange: function (event) {
                     var val = Number(event.currentTarget.value);
                     _this.changeParam(val, name);
                 } })));
     };
     return TimedInput;
-}(react_1.Component));
+}(React.Component));
 exports.default = TimedInput;
-//# sourceMappingURL=test.js.map
+//# sourceMappingURL=TimedInput.js.map
