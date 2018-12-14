@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
 export interface ITimedInput {
-    setState: Function,
-    componentWillUnmount: () => void,
     changeParam: (val: number, name: string) => void
 }
 
-class TimedInput extends Component implements ITimedInput{
-    state: object;
+export interface IState {
+    obj: object | null;
+    timer: number | null;
+}
+
+class TimedInput extends React.Component implements ITimedInput{
     constructor(props: object) {
         super(props);
         this.state = {
@@ -17,16 +19,17 @@ class TimedInput extends Component implements ITimedInput{
     }
 
     componentWillUnmount(): void {
-        const { timer } = this.state;
-        clearTimeout(timer);
+        const { timer }: any = this.state;
+        clearTimeout(timer as number);
     }
 
     changeParam: (val: number, name: string) => void = (val, name) => {
 
         const { name: n, onChangeTimed, onChange, time }: any = this.props;
         this.setState(
-            state => {
-                clearTimeout(this.state.timer);
+            () => {
+                const { timer }: any = this.state;
+                clearTimeout(timer as number);
                 let obj = {
                     val,
                     name: n
@@ -36,7 +39,7 @@ class TimedInput extends Component implements ITimedInput{
                 };
             },
             () => {
-                const { obj } = this.state;
+                const { obj }: any = this.state;
                 onChange(obj);
                 if (onChangeTimed) {
                     let timer = setTimeout(() => {
@@ -48,14 +51,14 @@ class TimedInput extends Component implements ITimedInput{
         );
     };
 
-    render() {
-        const { name } = this.props;
+    render(): object {
+        const { name }: any = this.props;
         return (
             <div className="App">
             <input
                 onChange={event => {
                     const val: number = Number(event.currentTarget.value);
-                    this.changeParam(val, name);
+                    this.changeParam(val, name as string);
                 }}
             />
         </div>
