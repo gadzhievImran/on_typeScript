@@ -56,6 +56,7 @@ class TimedInput extends React.Component implements ITimedInput{
         return (
             <div className="App">
             <input
+                placeholder="Введите offer_id"
                 onChange={event => {
                     const val: number = Number(event.currentTarget.value);
                     this.changeParam(val, name as string);

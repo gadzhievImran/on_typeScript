@@ -1,18 +1,13 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
-import TI from './TI';
-import Ttt from './ttt';
+import TimedInput from './TimedInput';
 import { OFFERS_URL_GET } from '../config';
 
-class App extends Component {
-  render() {
+function App () {
     return (
       <div>
-        <Ttt
-
-        />
         App
-        <TI
+        <TimedInput
             onChange={({ val, name }) => console.log('TI', val, name)}
             name="offer_id"
             time={500}
@@ -26,7 +21,6 @@ class App extends Component {
         />
       </div>
     );
-  }
 }
 
 export default App;
