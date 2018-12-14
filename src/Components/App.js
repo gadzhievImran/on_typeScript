@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import TimedInput from './TimedInput';
+import TI from './TI';
 import Ttt from './ttt';
 import { OFFERS_URL_GET } from '../config';
 
@@ -12,8 +12,8 @@ class App extends Component {
 
         />
         App
-        <TimedInput
-            onChange={({ val, name }) => console.log('TimedInput', val, name)}
+        <TI
+            onChange={({ val, name }) => console.log('TI', val, name)}
             name="offer_id"
             time={500}
             onChangeTimed={({ val, name }) => {
