@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ITodoItemProps, ITodoItemState } from '../config/interfaces/ITimedInput/index';
+import { ITodoItemProps, ITodoItemState } from '../config/interfaces/ITimedInput';
 
 class TimedInput extends React.Component <ITodoItemProps, ITodoItemState>{
     constructor(props: object) {
