@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c47002-88f2-4119-821b-e4dd1ad2280a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/TimedInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TimedInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/interfaces/ITimedInput/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/interfaces/Pages/ITimedInput/index.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -38,7 +40,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="js" value="30" />
-          <entry key="json" value="16" />
+          <entry key="json" value="17" />
           <entry key="jsx" value="1" />
           <entry key="map" value="1" />
           <entry key="ts" value="7" />
@@ -53,7 +55,7 @@
           <entry key="SourceMap" value="1" />
           <entry key="TypeScript" value="7" />
           <entry key="TypeScript JSX" value="17" />
-          <entry key="tsconfig" value="13" />
+          <entry key="tsconfig" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -61,14 +63,14 @@
           <entry key="js" value="147" />
           <entry key="json" value="76" />
           <entry key="ts" value="11" />
-          <entry key="tsx" value="2141" />
+          <entry key="tsx" value="2146" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="147" />
           <entry key="TypeScript" value="11" />
-          <entry key="TypeScript JSX" value="2141" />
+          <entry key="TypeScript JSX" value="2146" />
           <entry key="tsconfig" value="76" />
         </counts>
       </usages-collector>
@@ -91,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/TimedInput.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            <state relative-caret-position="98">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -101,7 +103,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/interfaces/ITimedInput/index.ts">
+        <entry file="file://$PROJECT_DIR$/src/config/interfaces/Pages/ITimedInput/index.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
@@ -202,13 +204,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="on_typeScript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="on_typeScript" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -230,6 +225,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/config/interfaces/Pages" />
       <recent name="$PROJECT_DIR$/src/config/interfaces/ITimedInput" />
       <recent name="$PROJECT_DIR$/src/Components" />
       <recent name="$PROJECT_DIR$" />
@@ -268,18 +264,18 @@
       <workItem from="1544788546125" duration="597000" />
       <workItem from="1544853993827" duration="620000" />
       <workItem from="1545027576882" duration="413000" />
-      <workItem from="1545044163517" duration="2060000" />
+      <workItem from="1545044163517" duration="3605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21127000" />
+    <option name="totallyTimeSpent" value="22672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="632" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -297,7 +293,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Terminal" order="3" visible="true" weight="0.32864583" />
+      <window_info anchor="right" id="Terminal" order="3" visible="true" weight="0.32864583" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,13 +381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -402,17 +391,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/interfaces/ITimedInput/index.ts">
+    <entry file="file://$PROJECT_DIR$/src/config/interfaces/Pages/ITimedInput/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/TimedInput.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="98">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
