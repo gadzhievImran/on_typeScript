@@ -1,8 +1,21 @@
 import * as React from 'react';
+import {promises} from "fs";
 
-class TimedInput extends React.Component <any, any>{
+export interface ITodoItemState {
+    obj: null | object;
+    timer: null | object;
+}
+
+export interface ITodoItemProps {
+    onChange: (val: number, name: string) => void;
+    name: string;
+    time: number;
+    onChangeTimed: (val: number, name: string) => void
+}
+
+class TimedInput extends React.Component <ITodoItemProps, ITodoItemState>{
     constructor(props: object) {
-        super(props);
+        super(props as ITodoItemProps);
 
         this.state = {
             obj: null,
