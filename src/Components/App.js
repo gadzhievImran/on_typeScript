@@ -25,13 +25,13 @@ var App = /** @class */ (function (_super) {
         return (React.createElement("div", null,
             React.createElement(TimedInput_1.default, { onChange: function (_a) {
                     var val = _a.val, name = _a.name;
-                    console.log('TI', val, name);
+                    // console.log('TI', val as number, name as string)
                 }, name: "offer_id", time: 500, onChangeTimed: function (_a) {
                     var val = _a.val, name = _a.name;
                     fetch(config_1.OFFERS_URL_GET + "?" + name + "=" + val).then(function (res) {
                         return res.json();
                     }).then(function (res) {
-                        console.log('res 2', res);
+                        // console.log('res 2', res);
                     });
                 } })));
     };

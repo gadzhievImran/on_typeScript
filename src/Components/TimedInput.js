@@ -14,35 +14,37 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+var PropTypes = require("prop-types");
 var TimedInput = /** @class */ (function (_super) {
     __extends(TimedInput, _super);
     function TimedInput(props) {
         var _this = _super.call(this, props) || this;
-        _this.changeParam = function (val, name) {
-            var _a = _this.props, n = _a.name, onChangeTimed = _a.onChangeTimed, onChange = _a.onChange, time = _a.time;
+        _this.changeParam = function (val, names) {
+            var _a = _this.props, name = _a.name, onChangeTimed = _a.onChangeTimed, onChange = _a.onChange, time = _a.time;
             _this.setState(function () {
                 var timer = _this.state.timer;
                 clearTimeout(timer);
-                var obj = {
+                var params = {
                     val: val,
-                    name: n
+                    name: name
                 };
                 return {
-                    obj: obj
+                    params: params
                 };
             }, function () {
-                var obj = _this.state.obj;
-                onChange(obj);
+                var params = _this.state.params;
+                console.log('params', params);
+                onChange(params);
                 if (onChangeTimed) {
                     var timer = setTimeout(function () {
-                        onChangeTimed(obj);
+                        onChangeTimed(params);
                     }, time ? time : 500);
                     _this.setState({ timer: timer });
                 }
             });
         };
         _this.state = {
-            obj: null,
+            params: null,
             timer: null
         };
         return _this;
@@ -53,7 +55,6 @@ var TimedInput = /** @class */ (function (_super) {
     };
     TimedInput.prototype.render = function () {
         var _this = this;
-        console.log('props', this.props);
         var name = this.props.name;
         return (React.createElement("div", null,
             React.createElement("div", null, "enter offer_id"),
@@ -61,6 +62,15 @@ var TimedInput = /** @class */ (function (_super) {
                     var val = Number(event.currentTarget.value);
                     _this.changeParam(val, name);
                 } })));
+    };
+    TimedInput.propTypes = {
+        name: PropTypes.string,
+        onchange: PropTypes.func,
+        onChangeTimed: PropTypes.func,
+        time: PropTypes.number
+    };
+    TimedInput.defaultProps = {
+        time: 500
     };
     return TimedInput;
 }(React.Component));

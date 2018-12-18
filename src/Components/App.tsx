@@ -9,7 +9,7 @@ class App extends React.Component {
             <div>
                 <TimedInput
                     onChange={({ val, name }: any): void => {
-                        console.log('TI', val as number, name as string)
+                        // console.log('TI', val as number, name as string)
                     }}
                     name="offer_id"
                     time={500}
@@ -17,7 +17,7 @@ class App extends React.Component {
                         fetch(`${OFFERS_URL_GET}?${name as string}=${val as number}`).then(res => {
                             return res.json();
                         }).then(res => {
-                            console.log('res 2', res);
+                            // console.log('res 2', res);
                         })
                     }}
                 />

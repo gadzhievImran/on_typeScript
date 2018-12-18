@@ -1,13 +1,34 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 
-import { ITodoItemProps, ITodoItemState } from '../config/interfaces/Pages/ITimedInput';
+interface ITodoItemState {
+    params: null | object;
+    timer: null | object;
+}
+
+interface ITodoItemProps {
+    onChange: (val: number, name: string) => void;
+    name: string;
+    time: number;
+    onChangeTimed: (val: number, name: string) => void
+}
 
 class TimedInput extends React.Component <ITodoItemProps, ITodoItemState>{
+    static propTypes = {
+        name: PropTypes.string,
+        onchange: PropTypes.func,
+        onChangeTimed: PropTypes.func,
+        time: PropTypes.number
+    };
+    static defaultProps = {
+        time: 500
+    };
+
     constructor(props: ITodoItemProps) {
         super(props as ITodoItemProps);
 
         this.state = {
-            obj: null,
+            params: null,
             timer: null
         };
     }
@@ -17,27 +38,28 @@ class TimedInput extends React.Component <ITodoItemProps, ITodoItemState>{
         clearTimeout(timer as number);
     }
 
-    changeParam: (val: number, name: string) => void = (val, name) => {
+    changeParam: (val: number, names: string) => void = (val, names) => {
 
-        const { name: n, onChangeTimed, onChange, time }: any = this.props;
+        const { name, onChangeTimed, onChange, time }: any = this.props;
         this.setState(
             () => {
                 const { timer }: any = this.state;
                 clearTimeout(timer as number);
-                let obj = {
+                let params = {
                     val,
-                    name: n
+                    name
                 };
                 return {
-                    obj
+                    params
                 };
             },
             () => {
-                const { obj }: any = this.state;
-                onChange(obj);
+                const { params }: any = this.state;
+                console.log('params', params);
+                onChange(params);
                 if (onChangeTimed) {
                     let timer = setTimeout(() => {
-                        onChangeTimed(obj);
+                        onChangeTimed(params);
                     }, time ? time : 500);
                     this.setState({ timer });
                 }
@@ -46,7 +68,6 @@ class TimedInput extends React.Component <ITodoItemProps, ITodoItemState>{
     };
 
     render(): object {
-        console.log('props', this.props);
         const { name }: any = this.props;
         return (
             <div>

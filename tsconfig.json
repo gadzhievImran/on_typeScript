@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "noImplicitAny": true,
     "module": "esnext",
     "target": "es5",
     "jsx": "preserve",
@@ -18,8 +17,5 @@
   },
   "include": [
     "./src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }
